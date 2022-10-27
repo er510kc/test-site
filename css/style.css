@@ -24,6 +24,7 @@ li {
 .site-title {
   line-height: 1px;
 }
+
 .site-title a {
   display: block;
 }
@@ -57,6 +58,7 @@ header {
   cursor: pointer;
   z-index: 20;
 }
+
 .toggle_btn span {
   display: block;
   position: absolute;
@@ -82,12 +84,15 @@ header {
 .show .toggle_btn span {
   background-color: #fff;
 }
+
 .show .toggle_btn span:nth-child(1) {
   transform: translateY(10px) rotate(-315deg);
 }
+
 .show .toggle_btn span:nth-child(2) {
   opacity: 0;
 }
+
 .show .toggle_btn span:nth-child(3) {
   transform: translateY(-10px) rotate(315deg);
 }
@@ -106,26 +111,32 @@ header {
   z-index: 20;
   opacity: 0;
 }
+
 #navi a {
   color: #fff;
 }
+
 #navi ul {
   margin: 0;
   padding: 0;
 }
+
 #navi ul.nav-menu {
   margin-bottom: 60px;
   border-top: solid 1px #fff;
 }
+
 #navi ul.nav-menu li {
   position: relative;
   margin: 0;
   padding: 20px 0;
   border-bottom: solid 1px #fff;
 }
+
 #navi ul.nav-sns {
   margin-bottom: 60px;
 }
+
 #navi ul.nav-sns li {
   position: relative;
   margin: 0;
@@ -141,6 +152,7 @@ header {
   left: 0;
   opacity: 1;
 }
+
 .show #mask {
   display: block;
   position: fixed;
@@ -180,6 +192,7 @@ header {
   visibility: hidden;
   font-size: 0;
 }
+
 .pickup-content li {
   padding: 0 30px;
 }
@@ -193,8 +206,9 @@ header {
   padding: 100px 16px 50px;
   margin: -50px 0 10px;
 }
+
 #feature .grid {
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
