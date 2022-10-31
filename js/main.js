@@ -1,12 +1,31 @@
 'use strict';
 {
+// ------------------------
+// ハンバーガーメニュー
+// ------------------------
   const btn = document.querySelector('.toggle_btn');
   const header = document.getElementById('header');
+  const mask = document.getElementById('mask');
+  const navi = document.querySelector('#navi a')
 
   btn.addEventListener('click',()=> {
     header.classList.toggle('show');
   });
+  
+   // // #maskのエリアをクリックした時にメニューを閉じる
+  mask.addEventListener('click',()=> {
+    header.classList.remove('show');
+  });
 
+  // リンクをクリックした時にメニューを閉じる
+  navi.addEventListener('click',()=> {
+    header.classList.remove('show');
+  });
+
+
+// ------------------------
+// Slick
+// ------------------------
   $(document).ready(function(){
     $('.pickup-content').slick({
       arrows: false,
@@ -25,4 +44,48 @@
     });
   });
 
+  // --------------------
+  // フェードイン
+  // --------------------
+  const targets = document.querySelectorAll('.fadein');
+  
+  function callback(entries, obs) {
+    console.log(entries);
+
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+  
+      entry.target.classList.add('appear');
+      obs.unobserve(entry.target);
+    });
+  }
+
+  const options = {
+    threshold: 0.4,
+  };
+
+  const observer = new IntersectionObserver(callback, options);
+
+  targets.forEach(target => {
+    observer.observe(target);
+  });
+
+  // --------------------
+  // スムーススクロール
+  // --------------------
+// ページ内リンクのイベント
+  $('a[href^="#"]').click(function(){
+  // リンクを取得
+  let href= $(this).attr("href");
+  // ジャンプ先のid名をセット
+  let target = $(href == "#" || href == "" ? 'html' : href);
+  // トップからジャンプ先の要素までの距離を取得
+  let position = target.offset().top;
+  // animateでスムーススクロールを行う
+  // 600はスクロール速度で単位はミリ秒
+  $("html, body").animate({scrollTop:position}, 600, "swing");
+  return false;
+});
 }

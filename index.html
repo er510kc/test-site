@@ -139,7 +139,7 @@
     <section id="contact">
       <h2 class="sec-title">CONTACT</h2>
       <div class="content">
-        <div class="conact-info">
+        <div class="contact-info">
           <p>テキストテキストテキスト</p>
           <p>
             テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -149,21 +149,34 @@
           </p>
           
         </div>
-        <div class="contant-form">
+        <div class="contact-form">
           <form action="#">
             <dl>
-              <dt>Name</dt>
-              <dd></dd>
+              <dt>
+                <label for="name"></label>Name:</dt>
+              <dd>
+                <input type="text" id="name" name="your-name">
+              </dd>
             </dl>
             <dl>
-              <dt>Mail</dt>
-              <dd></dd>
+              <dt>
+                <label for="email">Mail:</label>
+              </dt>
+              <dd>
+                <input type="email" id="email" name="your-email">
+              </dd>
             </dl>
             <dl>
-              <dt>Massage</dt>
-              <dd></dd>
+              <dt>
+                <label for="message">
+                  Massage:
+                </label>
+              </dt>
+              <dd>
+                <textarea id="message" name="your-message"></textarea>
+              </dd>
             </dl>
-            <div>
+            <div class="button">
               <input type="submit" value="SEND">
             </div>
           </form>
@@ -172,11 +185,14 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="footer">
     <p>&copy; Sneakers</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    console.log(document.getElementById("navi"));
+   </script>
 </body>
 </html>

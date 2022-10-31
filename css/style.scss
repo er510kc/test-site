@@ -1,6 +1,6 @@
 html {
   font-size: 100%;
-  
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +29,6 @@ dt {
 .site-title {
   line-height: 1px;
 }
-
 .site-title a {
   display: block;
 }
@@ -63,7 +62,6 @@ header {
   cursor: pointer;
   z-index: 20;
 }
-
 .toggle_btn span {
   display: block;
   position: absolute;
@@ -89,15 +87,12 @@ header {
 .show .toggle_btn span {
   background-color: #fff;
 }
-
 .show .toggle_btn span:nth-child(1) {
   transform: translateY(10px) rotate(-315deg);
 }
-
 .show .toggle_btn span:nth-child(2) {
   opacity: 0;
 }
-
 .show .toggle_btn span:nth-child(3) {
   transform: translateY(-10px) rotate(315deg);
 }
@@ -116,32 +111,26 @@ header {
   z-index: 20;
   opacity: 0;
 }
-
 #navi a {
   color: #fff;
 }
-
 #navi ul {
   margin: 0;
   padding: 0;
 }
-
 #navi ul.nav-menu {
   margin-bottom: 60px;
   border-top: solid 1px #fff;
 }
-
 #navi ul.nav-menu li {
   position: relative;
   margin: 0;
   padding: 20px 0;
   border-bottom: solid 1px #fff;
 }
-
 #navi ul.nav-sns {
   margin-bottom: 60px;
 }
-
 #navi ul.nav-sns li {
   position: relative;
   margin: 0;
@@ -157,7 +146,6 @@ header {
   left: 0;
   opacity: 1;
 }
-
 .show #mask {
   display: block;
   position: fixed;
@@ -197,7 +185,6 @@ header {
   visibility: hidden;
   font-size: 0;
 }
-
 .pickup-content li {
   padding: 0 30px;
 }
@@ -211,35 +198,45 @@ header {
   padding: 100px 16px 50px;
   margin: -50px auto 10px;
 }
-
 #feature .grid {
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-#feature .grid img {
-  vertical-align: top;
-}
-#feature .grid .item {
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px 4px #ccc;
-}
-#feature .grid .item-content {
-  padding: 30px;
-}
-#feature .grid .item-cat {
-  font-size: 0.75rem;
-  margin-bottom: 20px;
-}
-#feature .grid .item-text {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-#feature .grid .item-date {
-  font-style: 0.75rem;
-  text-align: right;
-}
 
+  img {    vertical-align: top;
+  }
+
+  .item {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px 4px #ccc;
+  }
+
+  .item-content {
+    padding: 30px;
+  }
+  .item-cat {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+  .item-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .item-date {
+    font-style: 0.75rem;
+    text-align: right;
+  }
+}
+// .fadein {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: opacity .3s, transform .3s;
+// }
+
+// .fadein.appear {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 .fadein {
   opacity: 0;
   transform: translateY(20px);
@@ -250,43 +247,54 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
-
+// -------------
+// contact
+// -------------
 #contact {
   color: #fff;
   background-color: #121212;
   padding: 50px 0;
-}
-#contact .sec-title {
-  color: #fff;
-}
-#contact .content {
-  max-width: 1240px;
-  padding: 0 16px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-#contact .content .contact-info, #contact .content .contact-form {
-  width: 45%;
-}
-#contact .content p {
-  margin-bottom: 30px;
-}
-#contact .content input, #contact .content textarea {
-  width: 100%;
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-#contact .content .button input {
-  width: 200px;
-  background-color: #121212;
-  border: solid 1px #fff;
-  padding: 12px 0;
-  margin-bottom: 0;
-  text-align: center;
-}
 
+  .sec-title {
+    color: #fff;
+  }
+  .content {
+    max-width: 1240px;
+    padding: 0 16px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .contact-info,.contact-form {
+      width: 45%;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    input,textarea {
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+      
+    }
+    .button input {
+      width: 200px;
+      background-color: #121212;
+      border: solid 1px #fff;
+      padding: 12px 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  
+  
+}
+// =====================
+// footer
+// =====================
 #footer {
   color: #fff;
   background-color: #121212;
@@ -294,5 +302,4 @@ header {
   padding: 10px;
   font-size: 0.75rem;
 }
-
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
