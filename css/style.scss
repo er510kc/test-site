@@ -302,4 +302,13 @@ header {
   padding: 10px;
   font-size: 0.75rem;
 }
+// =======================
+// sp
+// =======================
+@media screen and (max-width: 600px){
+  .sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
