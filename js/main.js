@@ -6,9 +6,23 @@
   const btn = document.querySelector('.toggle_btn');
   const header = document.getElementById('header');
   const mask = document.getElementById('mask');
-  const navi = document.querySelector('#navi')
+  const navi = document.querySelectorAll('#navi a')
+  const humbergerMenuSections = document.querySelectorAll(".humberger-menu-section");
 
-console.log(navi);
+
+  // humbergerMenuSections.forEach((humbergerMenuSection) => {
+  //   humbergerMenuSection.addEventListener('click', () => {
+  //     header.classList.remove('show');
+  //   });
+  // });
+
+  navi.forEach(
+    (nav) => {
+    nav.addEventListener('click', () => {
+      header.classList.remove('show');
+    });
+  });
+
   
   btn.addEventListener('click',()=> {
     header.classList.toggle('show');
@@ -19,10 +33,11 @@ console.log(navi);
     header.classList.remove('show');
   });
 
-  // リンクをクリックした時にメニューを閉じる
-  navi.addEventListener('click',()=> {
-      header.classList.remove('show');
-  });
+  // // リンクをクリックした時にメニューを閉じる
+  // navi.addEventListener('click',()=> {
+  //     header.classList.remove('show');
+  // });
+
 
 
 
