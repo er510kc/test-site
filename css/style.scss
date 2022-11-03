@@ -308,27 +308,43 @@ header {
 // sp
 // =======================
 @media screen and (max-width: 600px) {
+  #header {
+    padding: 20px 16px;
+  }
+ 
   .sec-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
+
   #bg-video {
     width: 100%
-  }
-  
-
-  #contact .content {    
-    flex-direction: column;
-    .contact-info,.contact-form {
-      width: 100%;
-    }
-    .button input {
-      width: 100%;
-    }
+    
   }
 
-  
-     
- 
+  #pickup {
+    padding: 80px 0;
+  }
+  #pickup .slick-area li {
+    padding: 0 20px;
+  }
+  #feature {
+    padding: 80px 16px;
+  }
+  #feature .grid .item-content {
+    padding: 16px;
+  }
+  #contact{
+    padding: 80px 0;
+    .content {    
+      flex-direction: column;
+      .contact-info,.contact-form {
+        width: 100%;
+      }
+      .button input {
+        width: 100%;
+      }
+    }
+  }  
 }
 /*# sourceMappingURL=style.css.map */
